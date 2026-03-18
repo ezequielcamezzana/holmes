@@ -1,0 +1,3145 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:ae6a2f9a-d8ea-40f8-ae34-d00a3d27b8d8",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2026-03-18T17:52:53-03:00",
+        "tools": {
+            "components": [
+                {
+                    "type": "application",
+                    "author": "anchore",
+                    "name": "syft",
+                    "version": "1.33.0"
+                }
+            ]
+        },
+        "component": {
+            "bom-ref": "af63bd4c8601b7f1",
+            "type": "file",
+            "name": "."
+        }
+    },
+    "components": [
+        {
+            "bom-ref": "pkg:golang/deducer?package-id=3b036f35fcd5d2f1",
+            "type": "library",
+            "name": "deducer",
+            "version": "UNKNOWN",
+            "purl": "pkg:golang/deducer",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/deducer?package-id=9bfda11bf135b902",
+            "type": "library",
+            "name": "deducer",
+            "version": "UNKNOWN",
+            "purl": "pkg:golang/deducer",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/deducer?package-id=feddb23a86053762",
+            "type": "library",
+            "name": "deducer",
+            "version": "UNKNOWN",
+            "purl": "pkg:golang/deducer",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/atotto/clipboard@v0.1.4?package-id=43d037e40446d76e",
+            "type": "library",
+            "name": "github.com/atotto/clipboard",
+            "version": "v0.1.4",
+            "cpe": "cpe:2.3:a:atotto:clipboard:v0.1.4:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/atotto/clipboard@v0.1.4",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:EH0zSVneZPSuFR11BlR9YppQTVDbh5+16AmcJi4g1z4="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/atotto/clipboard@v0.1.4?package-id=aab02fd2812f41a4",
+            "type": "library",
+            "name": "github.com/atotto/clipboard",
+            "version": "v0.1.4",
+            "cpe": "cpe:2.3:a:atotto:clipboard:v0.1.4:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/atotto/clipboard@v0.1.4",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:EH0zSVneZPSuFR11BlR9YppQTVDbh5+16AmcJi4g1z4="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1?package-id=bb449dbe827fed76#v2",
+            "type": "library",
+            "name": "github.com/aymanbagabas/go-osc52/v2",
+            "version": "v2.0.1",
+            "cpe": "cpe:2.3:a:aymanbagabas:go-osc52\\/v2:v2.0.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1#v2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:aymanbagabas:go_osc52\\/v2:v2.0.1:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiErDT4WkJ2k="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1?package-id=3e4776eab1f16879#v2",
+            "type": "library",
+            "name": "github.com/aymanbagabas/go-osc52/v2",
+            "version": "v2.0.1",
+            "cpe": "cpe:2.3:a:aymanbagabas:go-osc52\\/v2:v2.0.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1#v2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:aymanbagabas:go_osc52\\/v2:v2.0.1:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiErDT4WkJ2k="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1?package-id=3d7292ae0be0db1e#v2",
+            "type": "library",
+            "name": "github.com/aymanbagabas/go-osc52/v2",
+            "version": "v2.0.1",
+            "cpe": "cpe:2.3:a:aymanbagabas:go-osc52\\/v2:v2.0.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1#v2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:aymanbagabas:go_osc52\\/v2:v2.0.1:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiErDT4WkJ2k="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0?package-id=7ff4dfa1b9dfa07e",
+            "type": "library",
+            "name": "github.com/charmbracelet/bubbles",
+            "version": "v1.0.0",
+            "cpe": "cpe:2.3:a:charmbracelet:bubbles:v1.0.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:12J8/ak/uCZEMQ6KU7pcfwceyjLlWsDLAxB5fXonfvc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0?package-id=15327aa9d6c8d259",
+            "type": "library",
+            "name": "github.com/charmbracelet/bubbles",
+            "version": "v1.0.0",
+            "cpe": "cpe:2.3:a:charmbracelet:bubbles:v1.0.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:12J8/ak/uCZEMQ6KU7pcfwceyjLlWsDLAxB5fXonfvc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0?package-id=97cfbf7b3355753f",
+            "type": "library",
+            "name": "github.com/charmbracelet/bubbles",
+            "version": "v1.0.0",
+            "cpe": "cpe:2.3:a:charmbracelet:bubbles:v1.0.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:12J8/ak/uCZEMQ6KU7pcfwceyjLlWsDLAxB5fXonfvc="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10?package-id=f521c156de6e605c",
+            "type": "library",
+            "name": "github.com/charmbracelet/bubbletea",
+            "version": "v1.3.10",
+            "cpe": "cpe:2.3:a:charmbracelet:bubbletea:v1.3.10:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:otUDHWMMzQSB0Pkc87rm691KZ3SWa4KUlvF9nRvCICw="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10?package-id=f9ad3b759c25273e",
+            "type": "library",
+            "name": "github.com/charmbracelet/bubbletea",
+            "version": "v1.3.10",
+            "cpe": "cpe:2.3:a:charmbracelet:bubbletea:v1.3.10:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:otUDHWMMzQSB0Pkc87rm691KZ3SWa4KUlvF9nRvCICw="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10?package-id=0877d4ed51165bc6",
+            "type": "library",
+            "name": "github.com/charmbracelet/bubbletea",
+            "version": "v1.3.10",
+            "cpe": "cpe:2.3:a:charmbracelet:bubbletea:v1.3.10:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:otUDHWMMzQSB0Pkc87rm691KZ3SWa4KUlvF9nRvCICw="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1?package-id=ccb98ec4c4b2520b",
+            "type": "library",
+            "name": "github.com/charmbracelet/colorprofile",
+            "version": "v0.4.1",
+            "cpe": "cpe:2.3:a:charmbracelet:colorprofile:v0.4.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:a1lO03qTrSIRaK8c3JRxJDZOvhvIeSco3ej+ngLk1kk="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1?package-id=52796bfc9be062d0",
+            "type": "library",
+            "name": "github.com/charmbracelet/colorprofile",
+            "version": "v0.4.1",
+            "cpe": "cpe:2.3:a:charmbracelet:colorprofile:v0.4.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:a1lO03qTrSIRaK8c3JRxJDZOvhvIeSco3ej+ngLk1kk="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1?package-id=9582034781cf6acb",
+            "type": "library",
+            "name": "github.com/charmbracelet/colorprofile",
+            "version": "v0.4.1",
+            "cpe": "cpe:2.3:a:charmbracelet:colorprofile:v0.4.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:a1lO03qTrSIRaK8c3JRxJDZOvhvIeSco3ej+ngLk1kk="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/harmonica@v0.2.0?package-id=e1a68ac9c8724a22",
+            "type": "library",
+            "name": "github.com/charmbracelet/harmonica",
+            "version": "v0.2.0",
+            "cpe": "cpe:2.3:a:charmbracelet:harmonica:v0.2.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/harmonica@v0.2.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:8NxJWRWg/bzKqqEaaeFNipOu77YR5t8aSwG4pgaUBiQ="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/harmonica@v0.2.0?package-id=ef5d79e29712fc23",
+            "type": "library",
+            "name": "github.com/charmbracelet/harmonica",
+            "version": "v0.2.0",
+            "cpe": "cpe:2.3:a:charmbracelet:harmonica:v0.2.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/harmonica@v0.2.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:8NxJWRWg/bzKqqEaaeFNipOu77YR5t8aSwG4pgaUBiQ="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0?package-id=7ec938d31c8522b7",
+            "type": "library",
+            "name": "github.com/charmbracelet/lipgloss",
+            "version": "v1.1.0",
+            "cpe": "cpe:2.3:a:charmbracelet:lipgloss:v1.1.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:vYXsiLHVkK7fp74RkV7b2kq9+zDLoEU4MZoFqR/noCY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0?package-id=6d4ad07f44ac2e3d",
+            "type": "library",
+            "name": "github.com/charmbracelet/lipgloss",
+            "version": "v1.1.0",
+            "cpe": "cpe:2.3:a:charmbracelet:lipgloss:v1.1.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:vYXsiLHVkK7fp74RkV7b2kq9+zDLoEU4MZoFqR/noCY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0?package-id=5717a8e54439ceaf",
+            "type": "library",
+            "name": "github.com/charmbracelet/lipgloss",
+            "version": "v1.1.0",
+            "cpe": "cpe:2.3:a:charmbracelet:lipgloss:v1.1.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:vYXsiLHVkK7fp74RkV7b2kq9+zDLoEU4MZoFqR/noCY="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.11.6?package-id=10c14ec8939a1959#ansi",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/ansi",
+            "version": "v0.11.6",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/ansi:v0.11.6:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.11.6#ansi",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GhV21SiDz/45W9AnV2R61xZMRri5NlLnl6CVF7ihZW8="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.11.6?package-id=b092c7b6ce621be7#ansi",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/ansi",
+            "version": "v0.11.6",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/ansi:v0.11.6:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.11.6#ansi",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GhV21SiDz/45W9AnV2R61xZMRri5NlLnl6CVF7ihZW8="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.11.6?package-id=d16466e5c11c9c7c#ansi",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/ansi",
+            "version": "v0.11.6",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/ansi:v0.11.6:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.11.6#ansi",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GhV21SiDz/45W9AnV2R61xZMRri5NlLnl6CVF7ihZW8="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.0.15?package-id=1fce21c04e7d23d6#cellbuf",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/cellbuf",
+            "version": "v0.0.15",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/cellbuf:v0.0.15:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.0.15#cellbuf",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ur3pZy0o6z/R7EylET877CBxaiE1Sp1GMxoFPAIztPI="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.0.15?package-id=40c27b9d26c7bee8#cellbuf",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/cellbuf",
+            "version": "v0.0.15",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/cellbuf:v0.0.15:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.0.15#cellbuf",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ur3pZy0o6z/R7EylET877CBxaiE1Sp1GMxoFPAIztPI="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.0.15?package-id=da86d400c320b7cd#cellbuf",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/cellbuf",
+            "version": "v0.0.15",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/cellbuf:v0.0.15:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.0.15#cellbuf",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ur3pZy0o6z/R7EylET877CBxaiE1Sp1GMxoFPAIztPI="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.2.2?package-id=d21bb41bb7cfb1b3#term",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/term",
+            "version": "v0.2.2",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/term:v0.2.2:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.2.2#term",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xVRT/S2ZcKdhhOuSP4t5cLi5o+JxklsoEObBSgfgZRk="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.2.2?package-id=ec2ae589493dc6dd#term",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/term",
+            "version": "v0.2.2",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/term:v0.2.2:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.2.2#term",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xVRT/S2ZcKdhhOuSP4t5cLi5o+JxklsoEObBSgfgZRk="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/charmbracelet/x@v0.2.2?package-id=e16502c875bce6ab#term",
+            "type": "library",
+            "name": "github.com/charmbracelet/x/term",
+            "version": "v0.2.2",
+            "cpe": "cpe:2.3:a:charmbracelet:x\\/term:v0.2.2:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/charmbracelet/x@v0.2.2#term",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xVRT/S2ZcKdhhOuSP4t5cLi5o+JxklsoEObBSgfgZRk="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0?package-id=42ca976ea1dc3890",
+            "type": "library",
+            "name": "github.com/clipperhouse/displaywidth",
+            "version": "v0.9.0",
+            "cpe": "cpe:2.3:a:clipperhouse:displaywidth:v0.9.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:Qb4KOhYwRiN3viMv1v/3cTBlz3AcAZX3+y9OLhMtAtA="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0?package-id=470c3c2fb279b091",
+            "type": "library",
+            "name": "github.com/clipperhouse/displaywidth",
+            "version": "v0.9.0",
+            "cpe": "cpe:2.3:a:clipperhouse:displaywidth:v0.9.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:Qb4KOhYwRiN3viMv1v/3cTBlz3AcAZX3+y9OLhMtAtA="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0?package-id=b1922201881fd276",
+            "type": "library",
+            "name": "github.com/clipperhouse/displaywidth",
+            "version": "v0.9.0",
+            "cpe": "cpe:2.3:a:clipperhouse:displaywidth:v0.9.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:Qb4KOhYwRiN3viMv1v/3cTBlz3AcAZX3+y9OLhMtAtA="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1?package-id=43f7f8612821238f",
+            "type": "library",
+            "name": "github.com/clipperhouse/stringish",
+            "version": "v0.1.1",
+            "cpe": "cpe:2.3:a:clipperhouse:stringish:v0.1.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:+NSqMOr3GR6k1FdRhhnXrLfztGzuG+VuFDfatpWHKCs="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1?package-id=f316ed5989c1d92e",
+            "type": "library",
+            "name": "github.com/clipperhouse/stringish",
+            "version": "v0.1.1",
+            "cpe": "cpe:2.3:a:clipperhouse:stringish:v0.1.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:+NSqMOr3GR6k1FdRhhnXrLfztGzuG+VuFDfatpWHKCs="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1?package-id=9795481afef48435",
+            "type": "library",
+            "name": "github.com/clipperhouse/stringish",
+            "version": "v0.1.1",
+            "cpe": "cpe:2.3:a:clipperhouse:stringish:v0.1.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:+NSqMOr3GR6k1FdRhhnXrLfztGzuG+VuFDfatpWHKCs="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/uax29@v2.5.0?package-id=8e14985cada98d1a#v2",
+            "type": "library",
+            "name": "github.com/clipperhouse/uax29/v2",
+            "version": "v2.5.0",
+            "cpe": "cpe:2.3:a:clipperhouse:uax29\\/v2:v2.5.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/uax29@v2.5.0#v2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:x7T0T4eTHDONxFJsL94uKNKPHrclyFI0lm7+w94cO8U="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/uax29@v2.5.0?package-id=17ad2b71872aa42b#v2",
+            "type": "library",
+            "name": "github.com/clipperhouse/uax29/v2",
+            "version": "v2.5.0",
+            "cpe": "cpe:2.3:a:clipperhouse:uax29\\/v2:v2.5.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/uax29@v2.5.0#v2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:x7T0T4eTHDONxFJsL94uKNKPHrclyFI0lm7+w94cO8U="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/clipperhouse/uax29@v2.5.0?package-id=8da735de27bb34ad#v2",
+            "type": "library",
+            "name": "github.com/clipperhouse/uax29/v2",
+            "version": "v2.5.0",
+            "cpe": "cpe:2.3:a:clipperhouse:uax29\\/v2:v2.5.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/clipperhouse/uax29@v2.5.0#v2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:x7T0T4eTHDONxFJsL94uKNKPHrclyFI0lm7+w94cO8U="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/dustin/go-humanize@v1.0.1?package-id=4b83b21cda528d21",
+            "type": "library",
+            "name": "github.com/dustin/go-humanize",
+            "version": "v1.0.1",
+            "cpe": "cpe:2.3:a:dustin:go-humanize:v1.0.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/dustin/go-humanize@v1.0.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:dustin:go_humanize:v1.0.1:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/dustin/go-humanize@v1.0.1?package-id=8432997ae2bcf2c7",
+            "type": "library",
+            "name": "github.com/dustin/go-humanize",
+            "version": "v1.0.1",
+            "cpe": "cpe:2.3:a:dustin:go-humanize:v1.0.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/dustin/go-humanize@v1.0.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:dustin:go_humanize:v1.0.1:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/erikgeiser/coninput@v0.0.0-20211004153227-1c3628e74d0f?package-id=1284b838dcd5a2b7",
+            "type": "library",
+            "name": "github.com/erikgeiser/coninput",
+            "version": "v0.0.0-20211004153227-1c3628e74d0f",
+            "cpe": "cpe:2.3:a:erikgeiser:coninput:v0.0.0-20211004153227-1c3628e74d0f:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/erikgeiser/coninput@v0.0.0-20211004153227-1c3628e74d0f",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:Y/CXytFA4m6baUTXGLOoWe4PQhGxaX0KpnayAqC48p4="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/google/uuid@v1.6.0?package-id=07926e8ac6545444",
+            "type": "library",
+            "name": "github.com/google/uuid",
+            "version": "v1.6.0",
+            "cpe": "cpe:2.3:a:google:uuid:v1.6.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/google/uuid@v1.6.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/google/uuid@v1.6.0?package-id=f6424607fde0264b",
+            "type": "library",
+            "name": "github.com/google/uuid",
+            "version": "v1.6.0",
+            "cpe": "cpe:2.3:a:google:uuid:v1.6.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/google/uuid@v1.6.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0?package-id=94c0a0c53919a840",
+            "type": "library",
+            "name": "github.com/lucasb-eyer/go-colorful",
+            "version": "v1.3.0",
+            "cpe": "cpe:2.3:a:lucasb-eyer:go-colorful:v1.3.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb-eyer:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb_eyer:go-colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb_eyer:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb:go-colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:2/yBRLdWBZKrf7gB40FoiKfAWYQ0lqNcbuQwVHXptag="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0?package-id=7563af7054900100",
+            "type": "library",
+            "name": "github.com/lucasb-eyer/go-colorful",
+            "version": "v1.3.0",
+            "cpe": "cpe:2.3:a:lucasb-eyer:go-colorful:v1.3.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb-eyer:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb_eyer:go-colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb_eyer:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb:go-colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:2/yBRLdWBZKrf7gB40FoiKfAWYQ0lqNcbuQwVHXptag="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0?package-id=d229ca92394c07d7",
+            "type": "library",
+            "name": "github.com/lucasb-eyer/go-colorful",
+            "version": "v1.3.0",
+            "cpe": "cpe:2.3:a:lucasb-eyer:go-colorful:v1.3.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb-eyer:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb_eyer:go-colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb_eyer:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb:go-colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:lucasb:go_colorful:v1.3.0:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:2/yBRLdWBZKrf7gB40FoiKfAWYQ0lqNcbuQwVHXptag="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=f252fc7a4f0a39c0",
+            "type": "library",
+            "name": "github.com/mattn/go-isatty",
+            "version": "v0.0.20",
+            "cpe": "cpe:2.3:a:mattn:go-isatty:v0.0.20:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-isatty@v0.0.20",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_isatty:v0.0.20:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=faeeea6306ec2b36",
+            "type": "library",
+            "name": "github.com/mattn/go-isatty",
+            "version": "v0.0.20",
+            "cpe": "cpe:2.3:a:mattn:go-isatty:v0.0.20:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-isatty@v0.0.20",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_isatty:v0.0.20:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=34eda7dc0fcff16d",
+            "type": "library",
+            "name": "github.com/mattn/go-isatty",
+            "version": "v0.0.20",
+            "cpe": "cpe:2.3:a:mattn:go-isatty:v0.0.20:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-isatty@v0.0.20",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_isatty:v0.0.20:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=f4619afab7c4111c",
+            "type": "library",
+            "name": "github.com/mattn/go-isatty",
+            "version": "v0.0.20",
+            "cpe": "cpe:2.3:a:mattn:go-isatty:v0.0.20:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-isatty@v0.0.20",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_isatty:v0.0.20:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-localereader@v0.0.1?package-id=33f9337f163bac50",
+            "type": "library",
+            "name": "github.com/mattn/go-localereader",
+            "version": "v0.0.1",
+            "cpe": "cpe:2.3:a:mattn:go-localereader:v0.0.1:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-localereader@v0.0.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_localereader:v0.0.1:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ygSAOl7ZXTx4RdPYinUpg6W99U8jWvWi9Ye2JC/oIi4="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19?package-id=bbc1dd4ed75c3eff",
+            "type": "library",
+            "name": "github.com/mattn/go-runewidth",
+            "version": "v0.0.19",
+            "cpe": "cpe:2.3:a:mattn:go-runewidth:v0.0.19:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_runewidth:v0.0.19:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:v++JhqYnZuu5jSKrk9RbgF5v4CGUjqRfBm05byFGLdw="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19?package-id=f9b7891be1767f1b",
+            "type": "library",
+            "name": "github.com/mattn/go-runewidth",
+            "version": "v0.0.19",
+            "cpe": "cpe:2.3:a:mattn:go-runewidth:v0.0.19:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_runewidth:v0.0.19:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:v++JhqYnZuu5jSKrk9RbgF5v4CGUjqRfBm05byFGLdw="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19?package-id=2424c9dad0739e6e",
+            "type": "library",
+            "name": "github.com/mattn/go-runewidth",
+            "version": "v0.0.19",
+            "cpe": "cpe:2.3:a:mattn:go-runewidth:v0.0.19:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:mattn:go_runewidth:v0.0.19:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:v++JhqYnZuu5jSKrk9RbgF5v4CGUjqRfBm05byFGLdw="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6?package-id=e52e3bc101eb6e38",
+            "type": "library",
+            "name": "github.com/muesli/ansi",
+            "version": "v0.0.0-20230316100256-276c6243b2f6",
+            "cpe": "cpe:2.3:a:muesli:ansi:v0.0.0-20230316100256-276c6243b2f6:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ZK8zHtRHOkbHy6Mmr5D264iyp3TiX5OmNcI5cIARiQI="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6?package-id=91b1409587369ffd",
+            "type": "library",
+            "name": "github.com/muesli/ansi",
+            "version": "v0.0.0-20230316100256-276c6243b2f6",
+            "cpe": "cpe:2.3:a:muesli:ansi:v0.0.0-20230316100256-276c6243b2f6:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ZK8zHtRHOkbHy6Mmr5D264iyp3TiX5OmNcI5cIARiQI="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6?package-id=bf26c8fc89989d9d",
+            "type": "library",
+            "name": "github.com/muesli/ansi",
+            "version": "v0.0.0-20230316100256-276c6243b2f6",
+            "cpe": "cpe:2.3:a:muesli:ansi:v0.0.0-20230316100256-276c6243b2f6:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:ZK8zHtRHOkbHy6Mmr5D264iyp3TiX5OmNcI5cIARiQI="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/cancelreader@v0.2.2?package-id=66e9dba1141f6079",
+            "type": "library",
+            "name": "github.com/muesli/cancelreader",
+            "version": "v0.2.2",
+            "cpe": "cpe:2.3:a:muesli:cancelreader:v0.2.2:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/cancelreader@v0.2.2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3I4Kt4BQjOR54NavqnDogx/MIoWBFa0StPA8ELUXHmA="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/cancelreader@v0.2.2?package-id=9f99bc101e230d5c",
+            "type": "library",
+            "name": "github.com/muesli/cancelreader",
+            "version": "v0.2.2",
+            "cpe": "cpe:2.3:a:muesli:cancelreader:v0.2.2:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/cancelreader@v0.2.2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3I4Kt4BQjOR54NavqnDogx/MIoWBFa0StPA8ELUXHmA="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/cancelreader@v0.2.2?package-id=952b970833d2dae7",
+            "type": "library",
+            "name": "github.com/muesli/cancelreader",
+            "version": "v0.2.2",
+            "cpe": "cpe:2.3:a:muesli:cancelreader:v0.2.2:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/cancelreader@v0.2.2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3I4Kt4BQjOR54NavqnDogx/MIoWBFa0StPA8ELUXHmA="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/termenv@v0.16.0?package-id=75cd8fe6412ca952",
+            "type": "library",
+            "name": "github.com/muesli/termenv",
+            "version": "v0.16.0",
+            "cpe": "cpe:2.3:a:muesli:termenv:v0.16.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/termenv@v0.16.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:S5AlUN9dENB57rsbnkPyfdGuWIlkmzJjbFf0Tf5FWUc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/termenv@v0.16.0?package-id=5be83ab8b5dbd9e8",
+            "type": "library",
+            "name": "github.com/muesli/termenv",
+            "version": "v0.16.0",
+            "cpe": "cpe:2.3:a:muesli:termenv:v0.16.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/termenv@v0.16.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:S5AlUN9dENB57rsbnkPyfdGuWIlkmzJjbFf0Tf5FWUc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/muesli/termenv@v0.16.0?package-id=eda57fee892a5a88",
+            "type": "library",
+            "name": "github.com/muesli/termenv",
+            "version": "v0.16.0",
+            "cpe": "cpe:2.3:a:muesli:termenv:v0.16.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/muesli/termenv@v0.16.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:S5AlUN9dENB57rsbnkPyfdGuWIlkmzJjbFf0Tf5FWUc="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/ncruces/go-strftime@v1.0.0?package-id=e4954b4d5e3764f8",
+            "type": "library",
+            "name": "github.com/ncruces/go-strftime",
+            "version": "v1.0.0",
+            "cpe": "cpe:2.3:a:ncruces:go-strftime:v1.0.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/ncruces/go-strftime@v1.0.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:ncruces:go_strftime:v1.0.0:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:HMFp8mLCTPp341M/ZnA4qaf7ZlsbTc+miZjCLOFAw7w="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/ncruces/go-strftime@v1.0.0?package-id=1144b4da6fcfdc60",
+            "type": "library",
+            "name": "github.com/ncruces/go-strftime",
+            "version": "v1.0.0",
+            "cpe": "cpe:2.3:a:ncruces:go-strftime:v1.0.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/ncruces/go-strftime@v1.0.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                {
+                    "name": "syft:cpe23",
+                    "value": "cpe:2.3:a:ncruces:go_strftime:v1.0.0:*:*:*:*:*:*:*"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:HMFp8mLCTPp341M/ZnA4qaf7ZlsbTc+miZjCLOFAw7w="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec?package-id=22163d6e21795bcd",
+            "type": "library",
+            "name": "github.com/remyoudompheng/bigfft",
+            "version": "v0.0.0-20230129092748-24d4a6f8daec",
+            "cpe": "cpe:2.3:a:remyoudompheng:bigfft:v0.0.0-20230129092748-24d4a6f8daec:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec?package-id=82caff8370081f6f",
+            "type": "library",
+            "name": "github.com/remyoudompheng/bigfft",
+            "version": "v0.0.0-20230129092748-24d4a6f8daec",
+            "cpe": "cpe:2.3:a:remyoudompheng:bigfft:v0.0.0-20230129092748-24d4a6f8daec:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/rivo/uniseg@v0.4.7?package-id=feab75b52ed78788",
+            "type": "library",
+            "name": "github.com/rivo/uniseg",
+            "version": "v0.4.7",
+            "cpe": "cpe:2.3:a:rivo:uniseg:v0.4.7:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/rivo/uniseg@v0.4.7",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/rivo/uniseg@v0.4.7?package-id=a7b4083d2af666d7",
+            "type": "library",
+            "name": "github.com/rivo/uniseg",
+            "version": "v0.4.7",
+            "cpe": "cpe:2.3:a:rivo:uniseg:v0.4.7:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/rivo/uniseg@v0.4.7",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/rivo/uniseg@v0.4.7?package-id=2c0de3c260aa0d91",
+            "type": "library",
+            "name": "github.com/rivo/uniseg",
+            "version": "v0.4.7",
+            "cpe": "cpe:2.3:a:rivo:uniseg:v0.4.7:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/rivo/uniseg@v0.4.7",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e?package-id=6f4ad5ada40d9948",
+            "type": "library",
+            "name": "github.com/xo/terminfo",
+            "version": "v0.0.0-20220910002029-abceb7e1c41e",
+            "cpe": "cpe:2.3:a:xo:terminfo:v0.0.0-20220910002029-abceb7e1c41e:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:JVG44RsyaB9T2KIHavMF/ppJZNG9ZpyihvCd0w101no="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e?package-id=cd174aa861b6c6b1",
+            "type": "library",
+            "name": "github.com/xo/terminfo",
+            "version": "v0.0.0-20220910002029-abceb7e1c41e",
+            "cpe": "cpe:2.3:a:xo:terminfo:v0.0.0-20220910002029-abceb7e1c41e:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:JVG44RsyaB9T2KIHavMF/ppJZNG9ZpyihvCd0w101no="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e?package-id=470cccbaad5c75a4",
+            "type": "library",
+            "name": "github.com/xo/terminfo",
+            "version": "v0.0.0-20220910002029-abceb7e1c41e",
+            "cpe": "cpe:2.3:a:xo:terminfo:v0.0.0-20220910002029-abceb7e1c41e:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:JVG44RsyaB9T2KIHavMF/ppJZNG9ZpyihvCd0w101no="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/exp@v0.0.0-20251023183803-a4bb9ffd2546?package-id=526b262eaa5ad37a",
+            "type": "library",
+            "name": "golang.org/x/exp",
+            "version": "v0.0.0-20251023183803-a4bb9ffd2546",
+            "cpe": "cpe:2.3:a:golang:x\\/exp:v0.0.0-20251023183803-a4bb9ffd2546:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/exp@v0.0.0-20251023183803-a4bb9ffd2546",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:mgKeJMpvi0yx/sU5GsxQ7p6s2wtOnGAHZWCHUM4KGzY="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/exp@v0.0.0-20251023183803-a4bb9ffd2546?package-id=bd3586614e5b27fa",
+            "type": "library",
+            "name": "golang.org/x/exp",
+            "version": "v0.0.0-20251023183803-a4bb9ffd2546",
+            "cpe": "cpe:2.3:a:golang:x\\/exp:v0.0.0-20251023183803-a4bb9ffd2546:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/exp@v0.0.0-20251023183803-a4bb9ffd2546",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:mgKeJMpvi0yx/sU5GsxQ7p6s2wtOnGAHZWCHUM4KGzY="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/sys@v0.38.0?package-id=bdf858334625ef43",
+            "type": "library",
+            "name": "golang.org/x/sys",
+            "version": "v0.38.0",
+            "cpe": "cpe:2.3:a:golang:x\\/sys:v0.38.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/sys@v0.38.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3yZWxaJjBmCWXqhN1qh02AkOnCQ1poK6oF+a7xWL6Gc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/sys@v0.38.0?package-id=d6003d9e1eeddbd8",
+            "type": "library",
+            "name": "golang.org/x/sys",
+            "version": "v0.38.0",
+            "cpe": "cpe:2.3:a:golang:x\\/sys:v0.38.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/sys@v0.38.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3yZWxaJjBmCWXqhN1qh02AkOnCQ1poK6oF+a7xWL6Gc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/sys@v0.38.0?package-id=3582d729a0de9f00",
+            "type": "library",
+            "name": "golang.org/x/sys",
+            "version": "v0.38.0",
+            "cpe": "cpe:2.3:a:golang:x\\/sys:v0.38.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/sys@v0.38.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3yZWxaJjBmCWXqhN1qh02AkOnCQ1poK6oF+a7xWL6Gc="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/sys@v0.38.0?package-id=cea80853ccb1c70b",
+            "type": "library",
+            "name": "golang.org/x/sys",
+            "version": "v0.38.0",
+            "cpe": "cpe:2.3:a:golang:x\\/sys:v0.38.0:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/sys@v0.38.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:3yZWxaJjBmCWXqhN1qh02AkOnCQ1poK6oF+a7xWL6Gc="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/golang.org/x/text@v0.3.8?package-id=d6e3e5013fa1fc5d",
+            "type": "library",
+            "name": "golang.org/x/text",
+            "version": "v0.3.8",
+            "cpe": "cpe:2.3:a:golang:text:v0.3.8:*:*:*:*:*:*:*",
+            "purl": "pkg:golang/golang.org/x/text@v0.3.8",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:nAL+RVCQ9uMn3vJZbV+MRnydTJFPf8qqY42YiA6MrqY="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/libc@v1.67.6?package-id=b2d8cd09f7ba4190",
+            "type": "library",
+            "name": "modernc.org/libc",
+            "version": "v1.67.6",
+            "purl": "pkg:golang/modernc.org/libc@v1.67.6",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:eVOQvpModVLKOdT+LvBPjdQqfrZq+pC39BygcT+E7OI="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/libc@v1.67.6?package-id=f937a48d81f685f2",
+            "type": "library",
+            "name": "modernc.org/libc",
+            "version": "v1.67.6",
+            "purl": "pkg:golang/modernc.org/libc@v1.67.6",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:eVOQvpModVLKOdT+LvBPjdQqfrZq+pC39BygcT+E7OI="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/mathutil@v1.7.1?package-id=0620e8ab55afc405",
+            "type": "library",
+            "name": "modernc.org/mathutil",
+            "version": "v1.7.1",
+            "purl": "pkg:golang/modernc.org/mathutil@v1.7.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/mathutil@v1.7.1?package-id=610e3c135e640d33",
+            "type": "library",
+            "name": "modernc.org/mathutil",
+            "version": "v1.7.1",
+            "purl": "pkg:golang/modernc.org/mathutil@v1.7.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/memory@v1.11.0?package-id=896a4bbfdd2e5fed",
+            "type": "library",
+            "name": "modernc.org/memory",
+            "version": "v1.11.0",
+            "purl": "pkg:golang/modernc.org/memory@v1.11.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:o4QC8aMQzmcwCK3t3Ux/ZHmwFPzE6hf2Y5LbkRs+hbI="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/memory@v1.11.0?package-id=e97959334b57993e",
+            "type": "library",
+            "name": "modernc.org/memory",
+            "version": "v1.11.0",
+            "purl": "pkg:golang/modernc.org/memory@v1.11.0",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:o4QC8aMQzmcwCK3t3Ux/ZHmwFPzE6hf2Y5LbkRs+hbI="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/sqlite@v1.46.1?package-id=13f62087acacfe38",
+            "type": "library",
+            "name": "modernc.org/sqlite",
+            "version": "v1.46.1",
+            "purl": "pkg:golang/modernc.org/sqlite@v1.46.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                { "name": "syft:metadata:architecture", "value": "arm64" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                },
+                {
+                    "name": "syft:metadata:goCryptoSettings:0",
+                    "value": "standard-crypto"
+                },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:eFJ2ShBLIEnUWlLy12raN0Z1plqmFX9Qe3rjQTKt6sU="
+                },
+                { "name": "syft:metadata:mainModule", "value": "deducer" }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/modernc.org/sqlite@v1.46.1?package-id=48cd93b767d56764",
+            "type": "library",
+            "name": "modernc.org/sqlite",
+            "version": "v1.46.1",
+            "purl": "pkg:golang/modernc.org/sqlite@v1.46.1",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-file-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/go.mod" },
+                {
+                    "name": "syft:metadata:h1Digest",
+                    "value": "h1:eFJ2ShBLIEnUWlLy12raN0Z1plqmFX9Qe3rjQTKt6sU="
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/stdlib@1.24.2?package-id=5e6633eee6c5f6d2",
+            "type": "library",
+            "name": "stdlib",
+            "version": "go1.24.2",
+            "licenses": [{ "license": { "id": "BSD-3-Clause" } }],
+            "cpe": "cpe:2.3:a:golang:go:1.24.2:-:*:*:*:*:*:*",
+            "purl": "pkg:golang/stdlib@1.24.2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/cmd/tui/tui" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/stdlib@1.24.2?package-id=b8fa5cce6f3c23e0",
+            "type": "library",
+            "name": "stdlib",
+            "version": "go1.24.2",
+            "licenses": [{ "license": { "id": "BSD-3-Clause" } }],
+            "cpe": "cpe:2.3:a:golang:go:1.24.2:-:*:*:*:*:*:*",
+            "purl": "pkg:golang/stdlib@1.24.2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:golang/stdlib@1.24.2?package-id=882399184c48c343",
+            "type": "library",
+            "name": "stdlib",
+            "version": "go1.24.2",
+            "licenses": [{ "license": { "id": "BSD-3-Clause" } }],
+            "cpe": "cpe:2.3:a:golang:go:1.24.2:-:*:*:*:*:*:*",
+            "purl": "pkg:golang/stdlib@1.24.2",
+            "properties": [
+                {
+                    "name": "syft:package:foundBy",
+                    "value": "go-module-binary-cataloger"
+                },
+                { "name": "syft:package:language", "value": "go" },
+                { "name": "syft:package:type", "value": "go-module" },
+                {
+                    "name": "syft:package:metadataType",
+                    "value": "go-module-buildinfo-entry"
+                },
+                { "name": "syft:location:0:path", "value": "/deducer_server" },
+                {
+                    "name": "syft:metadata:goCompiledVersion",
+                    "value": "go1.24.2"
+                }
+            ]
+        },
+        {
+            "bom-ref": "f1dea9383fcc2db5",
+            "type": "file",
+            "name": "/Users/ezequielcamezzana/Proyectos/go/deducer/cmd/tui/tui",
+            "hashes": [
+                {
+                    "alg": "SHA-1",
+                    "content": "cea3ff8035f01cdeef4829670d13ab01e77270bb"
+                },
+                {
+                    "alg": "SHA-256",
+                    "content": "31c78340f74377f21806599130eff60802617ca0c2aaacd361596a4e11675e0d"
+                }
+            ]
+        },
+        {
+            "bom-ref": "71939156b67727e7",
+            "type": "file",
+            "name": "/Users/ezequielcamezzana/Proyectos/go/deducer/deducer",
+            "hashes": [
+                {
+                    "alg": "SHA-1",
+                    "content": "8ebbc106a79ce5bd9501561b1783882d620d10bd"
+                },
+                {
+                    "alg": "SHA-256",
+                    "content": "35b6effcd5a2240ed1a7f98a3eaa9138acff14fe89cdd2562112ff9731b08034"
+                }
+            ]
+        },
+        {
+            "bom-ref": "ef5c86c027c778cc",
+            "type": "file",
+            "name": "/Users/ezequielcamezzana/Proyectos/go/deducer/deducer_server",
+            "hashes": [
+                {
+                    "alg": "SHA-1",
+                    "content": "f741708fac72354b41fd770d592086400bf75efd"
+                },
+                {
+                    "alg": "SHA-256",
+                    "content": "7a331de7944d9844c98c073fbe895db9a33cddb5138fffe87f052927d44caf19"
+                }
+            ]
+        },
+        {
+            "bom-ref": "3fc5a8d3d86e9790",
+            "type": "file",
+            "name": "/Users/ezequielcamezzana/Proyectos/go/deducer/go.mod",
+            "hashes": [
+                {
+                    "alg": "SHA-1",
+                    "content": "d8886e37138279732dbc05c1dabe480fba39e19d"
+                },
+                {
+                    "alg": "SHA-256",
+                    "content": "876e1ce861f9d23d8ddb9ff6e7da4db486cd59b302b684f0e26954103458ea9b"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "pkg:golang/deducer?package-id=3b036f35fcd5d2f1",
+            "dependsOn": [
+                "pkg:golang/github.com/atotto/clipboard@v0.1.4?package-id=43d037e40446d76e",
+                "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1?package-id=bb449dbe827fed76#v2",
+                "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0?package-id=7ff4dfa1b9dfa07e",
+                "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10?package-id=f521c156de6e605c",
+                "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1?package-id=ccb98ec4c4b2520b",
+                "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0?package-id=7ec938d31c8522b7",
+                "pkg:golang/github.com/charmbracelet/x@v0.0.15?package-id=1fce21c04e7d23d6#cellbuf",
+                "pkg:golang/github.com/charmbracelet/x@v0.11.6?package-id=10c14ec8939a1959#ansi",
+                "pkg:golang/github.com/charmbracelet/x@v0.2.2?package-id=d21bb41bb7cfb1b3#term",
+                "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0?package-id=42ca976ea1dc3890",
+                "pkg:golang/github.com/clipperhouse/stringish@v0.1.1?package-id=43f7f8612821238f",
+                "pkg:golang/github.com/clipperhouse/uax29@v2.5.0?package-id=8e14985cada98d1a#v2",
+                "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0?package-id=94c0a0c53919a840",
+                "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=f252fc7a4f0a39c0",
+                "pkg:golang/github.com/mattn/go-runewidth@v0.0.19?package-id=bbc1dd4ed75c3eff",
+                "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6?package-id=e52e3bc101eb6e38",
+                "pkg:golang/github.com/muesli/cancelreader@v0.2.2?package-id=66e9dba1141f6079",
+                "pkg:golang/github.com/muesli/termenv@v0.16.0?package-id=75cd8fe6412ca952",
+                "pkg:golang/github.com/rivo/uniseg@v0.4.7?package-id=feab75b52ed78788",
+                "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e?package-id=6f4ad5ada40d9948",
+                "pkg:golang/golang.org/x/sys@v0.38.0?package-id=bdf858334625ef43",
+                "pkg:golang/stdlib@1.24.2?package-id=5e6633eee6c5f6d2"
+            ]
+        },
+        {
+            "ref": "pkg:golang/deducer?package-id=9bfda11bf135b902",
+            "dependsOn": [
+                "pkg:golang/github.com/aymanbagabas/go-osc52@v2.0.1?package-id=3e4776eab1f16879#v2",
+                "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0?package-id=15327aa9d6c8d259",
+                "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10?package-id=f9ad3b759c25273e",
+                "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1?package-id=52796bfc9be062d0",
+                "pkg:golang/github.com/charmbracelet/harmonica@v0.2.0?package-id=e1a68ac9c8724a22",
+                "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0?package-id=6d4ad07f44ac2e3d",
+                "pkg:golang/github.com/charmbracelet/x@v0.0.15?package-id=40c27b9d26c7bee8#cellbuf",
+                "pkg:golang/github.com/charmbracelet/x@v0.11.6?package-id=b092c7b6ce621be7#ansi",
+                "pkg:golang/github.com/charmbracelet/x@v0.2.2?package-id=ec2ae589493dc6dd#term",
+                "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0?package-id=470c3c2fb279b091",
+                "pkg:golang/github.com/clipperhouse/stringish@v0.1.1?package-id=f316ed5989c1d92e",
+                "pkg:golang/github.com/clipperhouse/uax29@v2.5.0?package-id=17ad2b71872aa42b#v2",
+                "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0?package-id=7563af7054900100",
+                "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=faeeea6306ec2b36",
+                "pkg:golang/github.com/mattn/go-runewidth@v0.0.19?package-id=f9b7891be1767f1b",
+                "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6?package-id=91b1409587369ffd",
+                "pkg:golang/github.com/muesli/cancelreader@v0.2.2?package-id=9f99bc101e230d5c",
+                "pkg:golang/github.com/muesli/termenv@v0.16.0?package-id=5be83ab8b5dbd9e8",
+                "pkg:golang/github.com/rivo/uniseg@v0.4.7?package-id=a7b4083d2af666d7",
+                "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e?package-id=cd174aa861b6c6b1",
+                "pkg:golang/golang.org/x/sys@v0.38.0?package-id=d6003d9e1eeddbd8",
+                "pkg:golang/stdlib@1.24.2?package-id=b8fa5cce6f3c23e0"
+            ]
+        },
+        {
+            "ref": "pkg:golang/deducer?package-id=feddb23a86053762",
+            "dependsOn": [
+                "pkg:golang/github.com/dustin/go-humanize@v1.0.1?package-id=4b83b21cda528d21",
+                "pkg:golang/github.com/google/uuid@v1.6.0?package-id=07926e8ac6545444",
+                "pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=34eda7dc0fcff16d",
+                "pkg:golang/github.com/ncruces/go-strftime@v1.0.0?package-id=e4954b4d5e3764f8",
+                "pkg:golang/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec?package-id=22163d6e21795bcd",
+                "pkg:golang/golang.org/x/exp@v0.0.0-20251023183803-a4bb9ffd2546?package-id=526b262eaa5ad37a",
+                "pkg:golang/golang.org/x/sys@v0.38.0?package-id=3582d729a0de9f00",
+                "pkg:golang/modernc.org/libc@v1.67.6?package-id=b2d8cd09f7ba4190",
+                "pkg:golang/modernc.org/mathutil@v1.7.1?package-id=0620e8ab55afc405",
+                "pkg:golang/modernc.org/memory@v1.11.0?package-id=896a4bbfdd2e5fed",
+                "pkg:golang/modernc.org/sqlite@v1.46.1?package-id=13f62087acacfe38",
+                "pkg:golang/stdlib@1.24.2?package-id=882399184c48c343"
+            ]
+        }
+    ]
+}

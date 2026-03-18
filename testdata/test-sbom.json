@@ -1,0 +1,86 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:test-sbom-001",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-01-15T10:00:00Z",
+    "component": {
+      "type": "application",
+      "name": "my-app",
+      "version": "1.0.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "axios",
+      "version": "0.21.1",
+      "purl": "pkg:npm/axios@0.21.1",
+      "description": "Promise based HTTP client for the browser and node.js"
+    },
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.20",
+      "purl": "pkg:npm/lodash@4.17.20",
+      "description": "Lodash modular utilities"
+    },
+    {
+      "type": "library",
+      "name": "minimist",
+      "version": "1.2.5",
+      "purl": "pkg:npm/minimist@1.2.5",
+      "description": "parse argument options"
+    },
+    {
+      "type": "library",
+      "name": "node-fetch",
+      "version": "2.6.0",
+      "purl": "pkg:npm/node-fetch@2.6.0",
+      "description": "A light-weight module that brings window.fetch to node.js"
+    },
+    {
+      "type": "library",
+      "name": "Pillow",
+      "version": "9.0.0",
+      "purl": "pkg:pypi/pillow@9.0.0",
+      "description": "Python Imaging Library"
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.27.0",
+      "purl": "pkg:pypi/requests@2.27.0",
+      "description": "Python HTTP for Humans"
+    },
+    {
+      "type": "library",
+      "name": "sys",
+      "version": "v0.0.0-20220412211240-33da011f77ad",
+      "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20220412211240-33da011f77ad",
+      "description": "Go supplementary system libraries"
+    },
+    {
+      "type": "library",
+      "name": "react",
+      "version": "18.2.0",
+      "purl": "pkg:npm/react@18.2.0",
+      "description": "React is a JavaScript library for building user interfaces"
+    },
+    {
+      "type": "library",
+      "name": "express",
+      "version": "4.18.2",
+      "purl": "pkg:npm/express@4.18.2",
+      "description": "Fast, unopinionated, minimalist web framework"
+    },
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "1.24.0",
+      "purl": "pkg:pypi/numpy@1.24.0",
+      "description": "Fundamental package for array computing in Python"
+    }
+  ]
+}

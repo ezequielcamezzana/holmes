@@ -1,0 +1,19 @@
+# Binaries
+holmes
+holmes_server
+holmes_tui
+deducer_cli
+
+# Cache
+*.db
+
+# Build artifacts
+*.test
+*.out
+
+# Internal docs
+CLAUDE.md
+DD.md
+
+# macOS
+.DS_Store
