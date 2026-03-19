@@ -29,7 +29,11 @@ func (d *Detective) Investigate(_ context.Context, clues *model.Clues) (model.In
 	}
 	assessment.IsValidSemver = true
 	// Strip the version from the PURL so we can match against range PURLs (which have no version).
+	// For URL-based lookups clues.PURL is empty; fall back to the canonical PURL from package data.
 	purlBase := stripPURLVersion(clues.PURL)
+	if purlBase == "" && clues.PackageData != nil && len(clues.PackageData.PURLs) > 0 {
+		purlBase = clues.PackageData.PURLs[0]
+	}
 
 	candidateFixes := make([]string, 0)
 	for _, vuln := range clues.Vulnerabilities {

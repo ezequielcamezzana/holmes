@@ -4,6 +4,7 @@ import (
 	"context"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	"holmes/internal/cache"
@@ -91,31 +92,68 @@ func (d *Detective) Investigate(ctx context.Context, clues *model.Clues) (model.
 			return inv, nil
 		}
 
+		// Separate complete records from stubs (id+modified only, no range/version data).
+		// Check the domain cache for each stub; collect those that need a network fetch.
+		type stubFetch struct {
+			stub model.Vulnerability
+			full model.Vulnerability
+		}
+		var toFetch []model.Vulnerability
 		for _, osvV := range osvVulns {
-			// Fetch full record if the batch returned a stub (id+modified only).
-			// Only skip the HTTP call if we already have an OSV-origin record in the
-			// domain store — an ecosystems-origin record is not a substitute.
-			if len(osvV.AffectedRanges) == 0 && len(osvV.AffectedVersions) == 0 && osvV.ID != "" {
-				fetched := false
-				if d.store != nil {
-					if cached, _ := d.store.GetVuln(ctx, osvV.ID); cached != nil && cached.Origin == "osv" {
-						osvV = *cached
-						fetched = true
-					}
+			isStub := len(osvV.AffectedRanges) == 0 && len(osvV.AffectedVersions) == 0 && osvV.ID != ""
+			if !isStub {
+				if existing, ok := byID[osvV.ID]; ok {
+					byID[osvV.ID] = mergeVulnerabilities(existing, osvV)
+				} else {
+					byID[osvV.ID] = osvV
 				}
-				if !fetched {
-					if full, err := d.osv.GetVulnByID(ctx, osvV.ID); err == nil && full != nil {
-						osvV = *full
+				if osvV.ID != "" {
+					osvVulnIDs = append(osvVulnIDs, osvV.ID)
+				}
+				continue
+			}
+			// Stub: try domain cache first (OSV-origin only).
+			if d.store != nil {
+				if cached, _ := d.store.GetVuln(ctx, osvV.ID); cached != nil && cached.Origin == "osv" {
+					if existing, ok := byID[osvV.ID]; ok {
+						byID[osvV.ID] = mergeVulnerabilities(existing, *cached)
+					} else {
+						byID[osvV.ID] = *cached
 					}
+					osvVulnIDs = append(osvVulnIDs, osvV.ID)
+					continue
 				}
 			}
-			if existing, ok := byID[osvV.ID]; ok {
-				byID[osvV.ID] = mergeVulnerabilities(existing, osvV)
-			} else {
-				byID[osvV.ID] = osvV
+			toFetch = append(toFetch, osvV)
+		}
+
+		// Fetch uncached stubs in parallel.
+		if len(toFetch) > 0 {
+			results := make(chan stubFetch, len(toFetch))
+			var wg sync.WaitGroup
+			for _, stub := range toFetch {
+				wg.Add(1)
+				stub := stub
+				go func() {
+					defer wg.Done()
+					full := stub
+					if fetched, err := d.osv.GetVulnByID(ctx, stub.ID); err == nil && fetched != nil {
+						full = *fetched
+					}
+					results <- stubFetch{stub: stub, full: full}
+				}()
 			}
-			if osvV.ID != "" {
-				osvVulnIDs = append(osvVulnIDs, osvV.ID)
+			wg.Wait()
+			close(results)
+			for r := range results {
+				if existing, ok := byID[r.full.ID]; ok {
+					byID[r.full.ID] = mergeVulnerabilities(existing, r.full)
+				} else {
+					byID[r.full.ID] = r.full
+				}
+				if r.full.ID != "" {
+					osvVulnIDs = append(osvVulnIDs, r.full.ID)
+				}
 			}
 		}
 

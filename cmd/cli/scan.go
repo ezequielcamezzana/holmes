@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"sync"
 
 	"github.com/charmbracelet/bubbles/progress"
 
@@ -19,6 +20,7 @@ type scanResult struct {
 	version   string
 	ecosystem string
 	report    model.CaseReport
+	err       error
 }
 
 func (r scanResult) displayName() string {
@@ -137,31 +139,53 @@ func cmdScan(res Resolver, args []string) {
 
 	ctx := context.Background()
 	total := len(components)
-	results := make([]scanResult, 0, total)
+	results := make([]scanResult, total)
+
+	const workers = 10
+	sem := make(chan struct{}, workers)
+	var wg sync.WaitGroup
+	var mu sync.Mutex
+	done := 0
 
 	bar := newProgressBar(total)
 	for i, comp := range components {
-		name, eco, ver := parsePURL(comp.PURL)
-		label := name
-		if ver != "" {
-			label += "@" + ver
-		}
-		bar.update(i+1, label)
+		wg.Add(1)
+		i, comp := i, comp
+		go func() {
+			defer wg.Done()
+			sem <- struct{}{}
+			defer func() { <-sem }()
 
-		report, err := res.Resolve(ctx, model.ResolveRequest{PURL: comp.PURL, Version: ver})
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "\nerror resolving %s: %v\n", comp.PURL, err)
+			name, eco, ver := parsePURL(comp.PURL)
+			report, err := res.Resolve(ctx, model.ResolveRequest{PURL: comp.PURL, Version: ver})
+
+			mu.Lock()
+			done++
+			label := name
+			if ver != "" {
+				label += "@" + ver
+			}
+			bar.update(done, label)
+			results[i] = scanResult{
+				purl:      comp.PURL,
+				name:      name,
+				version:   ver,
+				ecosystem: eco,
+				report:    report,
+				err:       err,
+			}
+			mu.Unlock()
+		}()
+	}
+	wg.Wait()
+	bar.done()
+
+	for _, r := range results {
+		if r.err != nil {
+			fmt.Fprintf(os.Stderr, "\nerror resolving %s: %v\n", r.purl, r.err)
 			os.Exit(1)
 		}
-		results = append(results, scanResult{
-			purl:      comp.PURL,
-			name:      name,
-			version:   ver,
-			ecosystem: eco,
-			report:    report,
-		})
 	}
-	bar.done()
 
 	// Styled report → stdout.
 	printScanReport(sbomPath, results)
