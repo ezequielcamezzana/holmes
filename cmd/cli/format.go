@@ -153,7 +153,7 @@ func printVulnTable(vulns []model.Vulnerability, fixes map[string]string) {
 			if col == 1 {
 				return sevStyleFor(normSev(vulns[row]))
 			}
-			if col == 5 {
+			if col == 5 || col == 6 {
 				return dimText
 			}
 			if row%2 == 0 {
@@ -161,7 +161,7 @@ func printVulnTable(vulns []model.Vulnerability, fixes map[string]string) {
 			}
 			return lipgloss.NewStyle()
 		}).
-		Headers("ID", "SEVERITY", "CVSS", "FIX", "SUMMARY", "PUBLISHED")
+		Headers("ID", "SEVERITY", "CVSS", "FIX", "SUMMARY", "PUBLISHED", "ORIGIN")
 
 	for _, v := range vulns {
 		sev := normSev(v)
@@ -175,7 +175,7 @@ func printVulnTable(vulns []model.Vulnerability, fixes map[string]string) {
 		if !v.PublishedAt.IsZero() {
 			published = formatTimeAgo(v.PublishedAt)
 		}
-		t.Row(v.ID, sev, cvss, fix, summary, published)
+		t.Row(v.ID, sev, cvss, fix, summary, published, v.Origin)
 	}
 
 	fmt.Println(t.Render())

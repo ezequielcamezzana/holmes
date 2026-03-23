@@ -7,6 +7,7 @@ type Clues struct {
 	RepoURL   string
 	Version   string
 	PURL      string
+	CPE       string // CPE 2.3 string — used by the NVD detective (future)
 
 	ResolvedName string
 	PackageData  *PackageData

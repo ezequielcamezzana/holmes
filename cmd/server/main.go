@@ -4,13 +4,15 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"holmes/internal/cache"
 	nameDetective "holmes/internal/detective/name"
+	nvdDetective "holmes/internal/detective/nvd"
+	osvDetective "holmes/internal/detective/osv"
 	packageDetective "holmes/internal/detective/package"
 	versionDetective "holmes/internal/detective/version"
-	vulnDetective "holmes/internal/detective/vuln"
 	"holmes/internal/model"
 	"holmes/internal/resolver"
 	"holmes/internal/service"
@@ -22,7 +24,8 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to init cache: %v", err)
 	}
-	cached := service.NewCachedClient(&http.Client{Timeout: 60 * time.Second}, store, service.CacheConfig{
+	httpClient := &http.Client{Timeout: 60 * time.Second}
+	cached := service.NewCachedClient(httpClient, store, service.CacheConfig{
 		DefaultTTL: 24 * time.Hour,
 		ServiceTTL: map[string]time.Duration{},
 	}, 3)
@@ -32,11 +35,13 @@ func main() {
 	goAdapter := adapters.NewGoAdapter(cached)
 	ecosystemsAdapter := adapters.NewEcosystemsAdapter(cached)
 	osvAdapter := adapters.NewOSVAdapter(cached)
+	nvdAdapter := adapters.NewNVDAdapter(httpClient, os.Getenv("NVD_API_KEY"))
 
 	res := resolver.New(
 		nameDetective.New(npmAdapter, pypiAdapter, goAdapter),
 		packageDetective.New(ecosystemsAdapter, store),
-		vulnDetective.New(osvAdapter, store),
+		osvDetective.New(osvAdapter, store),
+		nvdDetective.New(nvdAdapter, store),
 		versionDetective.New(),
 	)
 
@@ -73,7 +78,7 @@ func validInput(req model.ResolveRequest) bool {
 	if req.Name != "" && req.Ecosystem != "" {
 		return true
 	}
-	if req.RepositoryURL != "" || req.PURL != "" {
+	if req.RepositoryURL != "" || req.PURL != "" || req.CPE != "" {
 		return true
 	}
 	return false

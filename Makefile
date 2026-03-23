@@ -5,11 +5,12 @@ INSTALL_DIR := /usr/local/bin
 .PHONY: server install uninstall build test clean
 
 ## Start the server (builds first, then runs on :8080)
+## Loads .env if present (for NVD_API_KEY etc.)
 server:
 	@echo "Building server..."
 	@go build -o $(SERVER_BIN) ./cmd/server
 	@echo "Starting holmes server on :8080  (Ctrl+C to stop)"
-	@./$(SERVER_BIN)
+	@[ -f .env ] && export $$(grep -v '^#' .env | xargs) || true; ./$(SERVER_BIN)
 
 ## Build the CLI binary locally (output: ./holmes)
 build:

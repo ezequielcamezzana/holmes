@@ -54,6 +54,7 @@ type cdxComponentMeta struct {
 	Name        string `json:"name"`
 	Version     string `json:"version"`
 	PURL        string `json:"purl"`
+	CPE         string `json:"cpe"`
 	Description string `json:"description"`
 	Type        string `json:"type"`
 }
@@ -133,7 +134,7 @@ func cmdScan(res Resolver, args []string) {
 		os.Exit(1)
 	}
 	if len(components) == 0 {
-		fmt.Fprintln(os.Stderr, "no components with PURLs found in SBOM")
+		fmt.Fprintln(os.Stderr, "no components with PURLs or CPEs found in SBOM")
 		os.Exit(0)
 	}
 
@@ -156,8 +157,19 @@ func cmdScan(res Resolver, args []string) {
 			sem <- struct{}{}
 			defer func() { <-sem }()
 
+			// Derive display fields. For PURL components use PURL parsing;
+			// for CPE-only components fall back to the component's name/version fields.
 			name, eco, ver := parsePURL(comp.PURL)
-			report, err := res.Resolve(ctx, model.ResolveRequest{PURL: comp.PURL, Version: ver})
+			if comp.PURL == "" {
+				name = comp.meta.Name
+				ver = comp.meta.Version
+			}
+
+			report, err := res.Resolve(ctx, model.ResolveRequest{
+				PURL:    comp.PURL,
+				CPE:     comp.CPE,
+				Version: ver,
+			})
 
 			mu.Lock()
 			done++
@@ -225,11 +237,12 @@ func cmdScan(res Resolver, args []string) {
 
 type sbomComponent struct {
 	PURL string
+	CPE  string
 	meta cdxComponentMeta
 }
 
 // collectComponents recursively walks the CycloneDX component tree and collects
-// all components that have a PURL, deduplicating by PURL.
+// all components that have a PURL or CPE, deduplicating by PURL (preferred) then CPE.
 func collectComponents(raws []json.RawMessage, seen map[string]struct{}, out *[]sbomComponent) {
 	for _, raw := range raws {
 		var meta cdxComponentMeta
@@ -237,12 +250,23 @@ func collectComponents(raws []json.RawMessage, seen map[string]struct{}, out *[]
 			continue
 		}
 		p := strings.TrimSpace(meta.PURL)
-		if p != "" {
+		c := strings.TrimSpace(meta.CPE)
+
+		switch {
+		case p != "":
+			// PURL takes priority — deduplicate by PURL.
 			if _, ok := seen[p]; !ok {
 				seen[p] = struct{}{}
-				*out = append(*out, sbomComponent{PURL: p, meta: meta})
+				*out = append(*out, sbomComponent{PURL: p, CPE: c, meta: meta})
+			}
+		case c != "":
+			// CPE-only component — deduplicate by CPE.
+			if _, ok := seen[c]; !ok {
+				seen[c] = struct{}{}
+				*out = append(*out, sbomComponent{CPE: c, meta: meta})
 			}
 		}
+
 		// Recurse into nested components (syft-style SBOMs wrap packages this way).
 		var nested cdxNestedComponent
 		if err := json.Unmarshal(raw, &nested); err == nil && len(nested.Components) > 0 {

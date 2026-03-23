@@ -58,6 +58,7 @@ func (r *Resolver) Resolve(ctx context.Context, req model.ResolveRequest) model.
 		RepoURL:   req.RepositoryURL,
 		Version:   version,
 		PURL:      purl,
+		CPE:       req.CPE,
 	}
 	report := model.CaseReport{Investigations: make([]model.Investigation, 0, len(r.pipeline))}
 	for _, d := range r.pipeline {

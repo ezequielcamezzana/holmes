@@ -18,6 +18,7 @@ func cmdResolve(res Resolver, args []string) {
 	eco     := fs.String("eco", "", "ecosystem (npm, pypi, go)")
 	purl    := fs.String("purl", "", "package URL (pkg:npm/axios or pkg:npm/axios@1.2.2)")
 	url     := fs.String("url", "", "repository URL")
+	cpe     := fs.String("cpe", "", "CPE 2.3 string (cpe:2.3:a:vendor:product:version:...)")
 	version := fs.String("version", "", "version to check for vulnerability assessment")
 	fs.Usage = func() {
 		fmt.Fprintln(os.Stderr, "Usage: holmes resolve [flags]\n\nFlags:")
@@ -30,9 +31,10 @@ func cmdResolve(res Resolver, args []string) {
 		Ecosystem:     *eco,
 		PURL:          *purl,
 		RepositoryURL: *url,
+		CPE:           *cpe,
 		Version:       *version,
 	}
-	if req.Name == "" && req.PURL == "" && req.RepositoryURL == "" {
+	if req.Name == "" && req.PURL == "" && req.RepositoryURL == "" && req.CPE == "" {
 		fs.Usage()
 		os.Exit(1)
 	}
@@ -76,6 +78,9 @@ func resolveLabel(req model.ResolveRequest) string {
 			return req.Name + "@" + req.Version + " [" + req.Ecosystem + "]"
 		}
 		return req.Name + " [" + req.Ecosystem + "]"
+	}
+	if req.CPE != "" {
+		return req.CPE
 	}
 	if req.RepositoryURL != "" {
 		return req.RepositoryURL

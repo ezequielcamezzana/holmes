@@ -35,23 +35,30 @@ func (d *Detective) Investigate(_ context.Context, clues *model.Clues) (model.In
 		purlBase = clues.PackageData.PURLs[0]
 	}
 
+	// bestMatch tracks the best AffectingVuln per ID.
+	// The same vuln ID can appear more than once in clues.Vulnerabilities (different origins),
+	// so we keep whichever match provides a fix version.
+	bestMatch := map[string]model.AffectingVuln{}
 	candidateFixes := make([]string, 0)
 	for _, vuln := range clues.Vulnerabilities {
 		if match, method, rangeFix := matchesVuln(clues.Version, vNorm, purlBase, vuln); match {
 			fix := rangeFix
 			if fix == "" {
-				// Explicit-list match: derive fix from PURL-filtered ranges.
 				fix = nearestFixFromRanges(vNorm, purlBase, vuln.AffectedRanges)
 				if fix == "" {
-					// Last resort: global FixedVersions (ecosystems-origin data).
 					fix = nearestFixAbove(vNorm, vuln.FixedVersions)
 				}
 			}
-			assessment.AffectingVulns = append(assessment.AffectingVulns, model.AffectingVuln{ID: vuln.ID, MatchMethod: method, FixedIn: fix})
+			if existing, seen := bestMatch[vuln.ID]; !seen || (existing.FixedIn == "" && fix != "") {
+				bestMatch[vuln.ID] = model.AffectingVuln{ID: vuln.ID, MatchMethod: method, FixedIn: fix}
+			}
 			if fix != "" {
 				candidateFixes = append(candidateFixes, fix)
 			}
 		}
+	}
+	for _, av := range bestMatch {
+		assessment.AffectingVulns = append(assessment.AffectingVulns, av)
 	}
 	assessment.IsVulnerable = len(assessment.AffectingVulns) > 0
 	if fix := nearestFixAbove(vNorm, candidateFixes); fix != "" {
@@ -108,6 +115,11 @@ func matchesVuln(rawVersion, version string, packagePURL string, vuln model.Vuln
 			}
 			if inRange(version, r.VersionIntroduced, r.VersionFixed) {
 				return true, "range_check", r.VersionFixed
+			}
+		}
+		if strings.EqualFold(r.Type, "NVD_CPE") {
+			if inRangeNVD(version, r.Introduced, r.Fixed, r.LastAffected) {
+				return true, "range_check", r.Fixed
 			}
 		}
 	}
@@ -176,6 +188,34 @@ func inRange(version, introduced, fixed string) bool {
 		return true
 	}
 	return compareSemver(version, fNorm) < 0
+}
+
+// inRangeNVD checks a version against NVD CPE bounds.
+// Fixed is exclusive (version < Fixed); LastAffected is inclusive (version <= LastAffected).
+func inRangeNVD(version, introduced, fixed, lastAffected string) bool {
+	if introduced == "" {
+		introduced = "0.0.0"
+	}
+	intro, ok := normalizeSemver(introduced)
+	if !ok {
+		intro = "0.0.0"
+	}
+	if compareSemver(version, intro) < 0 {
+		return false
+	}
+	if fixed != "" {
+		fNorm, ok := normalizeSemver(fixed)
+		if ok && compareSemver(version, fNorm) >= 0 {
+			return false
+		}
+	}
+	if lastAffected != "" {
+		lNorm, ok := normalizeSemver(lastAffected)
+		if ok && compareSemver(version, lNorm) > 0 {
+			return false
+		}
+	}
+	return true
 }
 
 // nearestFixFromRanges finds the nearest fix version above current from

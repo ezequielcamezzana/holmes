@@ -77,6 +77,13 @@ CREATE TABLE IF NOT EXISTS package_vuln_queries (
     PRIMARY KEY (package_id)
 );
 
+CREATE TABLE IF NOT EXISTS cpe_vuln_queries (
+    cpe         TEXT PRIMARY KEY,
+    vuln_ids    TEXT NOT NULL DEFAULT '[]',
+    queried_at  DATETIME NOT NULL,
+    ttl_seconds INTEGER NOT NULL DEFAULT 86400
+);
+
 CREATE TABLE IF NOT EXISTS db_meta (
     key   TEXT PRIMARY KEY,
     value TEXT NOT NULL
@@ -97,7 +104,7 @@ func (s *SQLiteStore) migrateVulns() error {
 	if stored == vulnSchemaVersion {
 		return nil
 	}
-	_, err := s.db.Exec(`DELETE FROM package_vuln_queries; DELETE FROM vulns;`)
+	_, err := s.db.Exec(`DELETE FROM package_vuln_queries; DELETE FROM cpe_vuln_queries; DELETE FROM vulns;`)
 	if err != nil {
 		return err
 	}
@@ -323,5 +330,73 @@ ON CONFLICT(package_id) DO UPDATE SET
     queried_at  = excluded.queried_at,
     ttl_seconds = excluded.ttl_seconds
 `, packageID, string(idsJSON), time.Now().UTC(), int64(ttl.Seconds()))
+	return err
+}
+
+// ── NVD / CPE query tracking ─────────────────────────────────────────────────
+
+func (s *SQLiteStore) GetVulnByOrigin(ctx context.Context, id, origin string) (*model.Vulnerability, error) {
+	var data string
+	var fetchedAt time.Time
+	var ttl int64
+	err := s.db.QueryRowContext(ctx,
+		`SELECT data, fetched_at, ttl_seconds FROM vulns WHERE id = ? AND origin = ?`,
+		id, origin).Scan(&data, &fetchedAt, &ttl)
+	if err == sql.ErrNoRows {
+		return nil, nil
+	}
+	if err != nil {
+		return nil, err
+	}
+	if fetchedAt.Add(time.Duration(ttl) * time.Second).Before(time.Now().UTC()) {
+		return nil, nil
+	}
+	var v model.Vulnerability
+	if err := json.Unmarshal([]byte(data), &v); err != nil {
+		return nil, err
+	}
+	return &v, nil
+}
+
+func (s *SQLiteStore) GetCPEQuery(ctx context.Context, cpe string) ([]string, bool, error) {
+	var idsJSON string
+	var queriedAt time.Time
+	var ttl int64
+	err := s.db.QueryRowContext(ctx,
+		`SELECT vuln_ids, queried_at, ttl_seconds FROM cpe_vuln_queries WHERE cpe = ?`,
+		cpe).Scan(&idsJSON, &queriedAt, &ttl)
+	if err == sql.ErrNoRows {
+		return nil, false, nil
+	}
+	if err != nil {
+		return nil, false, err
+	}
+	if queriedAt.Add(time.Duration(ttl) * time.Second).Before(time.Now().UTC()) {
+		return nil, false, nil
+	}
+	var ids []string
+	if err := json.Unmarshal([]byte(idsJSON), &ids); err != nil {
+		return nil, false, err
+	}
+	return ids, true, nil
+}
+
+func (s *SQLiteStore) SaveCPEQuery(ctx context.Context, cpe string, vulnIDs []string, ttl time.Duration) error {
+	ids := vulnIDs
+	if ids == nil {
+		ids = []string{}
+	}
+	idsJSON, err := json.Marshal(ids)
+	if err != nil {
+		return err
+	}
+	_, err = s.db.ExecContext(ctx, `
+INSERT INTO cpe_vuln_queries (cpe, vuln_ids, queried_at, ttl_seconds)
+VALUES (?, ?, ?, ?)
+ON CONFLICT(cpe) DO UPDATE SET
+    vuln_ids    = excluded.vuln_ids,
+    queried_at  = excluded.queried_at,
+    ttl_seconds = excluded.ttl_seconds
+`, cpe, string(idsJSON), time.Now().UTC(), int64(ttl.Seconds()))
 	return err
 }

@@ -8,6 +8,7 @@ type ResolveRequest struct {
 	Version       string `json:"version"`
 	RepositoryURL string `json:"repository_url"`
 	PURL          string `json:"purl"`
+	CPE           string `json:"cpe,omitempty"`
 }
 
 type CaseReport struct {

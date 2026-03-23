@@ -54,4 +54,16 @@ type DomainStore interface {
 	// vulnIDs may be empty (genuinely no vulns found) — this is still persisted
 	// so we don't re-query until the TTL expires.
 	SaveVulnQuery(ctx context.Context, packageName, ecosystem string, vulnIDs []string, ttl time.Duration) error
+
+	// GetVulnByOrigin returns the cached vuln for a specific (id, origin) pair.
+	// Returns nil, nil when not found or expired.
+	GetVulnByOrigin(ctx context.Context, id, origin string) (*model.Vulnerability, error)
+
+	// GetCPEQuery returns the NVD vuln IDs recorded for a CPE string.
+	// ok=false means no valid (non-expired) record exists.
+	GetCPEQuery(ctx context.Context, cpe string) (ids []string, ok bool, err error)
+
+	// SaveCPEQuery records the NVD query result for a CPE string.
+	// vulnIDs may be empty — this is still persisted so we don't re-query until TTL expires.
+	SaveCPEQuery(ctx context.Context, cpe string, vulnIDs []string, ttl time.Duration) error
 }

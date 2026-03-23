@@ -17,6 +17,7 @@
       "name": "axios",
       "version": "0.21.1",
       "purl": "pkg:npm/axios@0.21.1",
+      "cpe": "cpe:2.3:a:axios:axios:0.21.1:*:*:*:*:node.js:*:*",
       "description": "Promise based HTTP client for the browser and node.js"
     },
     {
@@ -24,6 +25,7 @@
       "name": "lodash",
       "version": "4.17.20",
       "purl": "pkg:npm/lodash@4.17.20",
+      "cpe": "cpe:2.3:a:lodash:lodash:4.17.20:*:*:*:*:node.js:*:*",
       "description": "Lodash modular utilities"
     },
     {
@@ -45,6 +47,7 @@
       "name": "Pillow",
       "version": "9.0.0",
       "purl": "pkg:pypi/pillow@9.0.0",
+      "cpe": "cpe:2.3:a:python-pillow:pillow:9.0.0:*:*:*:*:*:*:*",
       "description": "Python Imaging Library"
     },
     {
@@ -73,6 +76,7 @@
       "name": "express",
       "version": "4.18.2",
       "purl": "pkg:npm/express@4.18.2",
+      "cpe": "cpe:2.3:a:expressjs:express:4.18.2:*:*:*:*:node.js:*:*",
       "description": "Fast, unopinionated, minimalist web framework"
     },
     {
@@ -80,7 +84,15 @@
       "name": "numpy",
       "version": "1.24.0",
       "purl": "pkg:pypi/numpy@1.24.0",
+      "cpe": "cpe:2.3:a:numpy:numpy:1.24.0:*:*:*:*:*:*:*",
       "description": "Fundamental package for array computing in Python"
+    },
+    {
+      "type": "library",
+      "name": "log4j",
+      "version": "2.14.1",
+      "cpe": "cpe:2.3:a:apache:log4j:2.14.1:*:*:*:*:*:*:*",
+      "description": "Apache Log4j 2 logging framework (CPE-only, no PURL)"
     }
   ]
 }
